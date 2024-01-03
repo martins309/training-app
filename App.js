@@ -1,11 +1,14 @@
 import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { DashBoard } from './components/DashBoard';
 
 export default function App() {
   return (
     <View>
       <Text>This is the navigation portion of the app</Text>
+      <DashBoard />
+
     </View>
   );
 }
@@ -15,7 +18,8 @@ const Stack = () => {
     <NavigationContainer>
       <Stack.Navigtaion>
         <Stack.Screen
-          name= 'HomePage'
+          name= 'DashBoard'
+          component={DashBoard}
         />
       </Stack.Navigtaion>
     </NavigationContainer>
